@@ -4,7 +4,7 @@ require("dotenv").config()
 
 module.exports = defineConfig({
   reporter: 'mochawesome',
-  "reporterOptions": {
+  reporterOptions: {
     "overwrite": false,
     "html": false,
     "json": true
@@ -15,7 +15,7 @@ module.exports = defineConfig({
     video: false,
     screenshotOnRunFailure: true,
     async setupNodeEvents(on, config) {
-      return require("./config/plugin")(on, config);
+      return config;
     },
   },
 });
