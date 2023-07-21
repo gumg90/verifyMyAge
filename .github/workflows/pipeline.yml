@@ -35,12 +35,15 @@ jobs:
               uses: cypress-io/github-action@v4
               with:
                   command: npm run cy:run
-
+            
+            - name: Merge test reports
+              run: npm run combine:report
+          
             - name: Generate HTML report
               run: npm run generate:report
-
+                
             - name: Deploy report page to GitHub Page
               uses: peaceiris/actions-gh-pages@v3
               with:
-                github_token: ${{ secrets.GITHUB_TOKEN }}
-                publish_dir: ./public
+                    github_token: ${{ secrets.GITHUB_TOKEN }}
+                    publish_dir: ./public
