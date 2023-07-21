@@ -6,8 +6,9 @@ module.exports = defineConfig({
   reporter: 'mochawesome',
   reporterOptions: {
     "overwrite": false,
-    "html": false,
-    "json": true
+    "html": true,
+    "json": true,
+    "reportFilename": "index"
   },
   e2e: {
     baseUrl: context[process.env.CONTEXT].baseUrl,
