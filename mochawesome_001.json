@@ -1,0 +1,142 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-07-21T01:49:44.361Z",
+    "end": "2023-07-21T01:49:49.542Z",
+    "duration": 5181,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a0a2aed3-254d-48f9-a448-3ae4e5bbcfe2",
+      "title": "",
+      "fullFile": "cypress/e2e/web/web.cy.js",
+      "file": "cypress/e2e/web/web.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "af0f941a-b87b-4d20-a7e9-c0110f22dd49",
+          "title": "BankBug",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Register accounts with amount",
+              "fullTitle": "BankBug Register accounts with amount",
+              "timedOut": null,
+              "duration": 2326,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.registerAccount(_userDataUtils.web.email1, _userDataUtils.web.name1, _userDataUtils.web.password);\ncy.validateRegister();",
+              "err": {},
+              "uuid": "ebb432ee-6a75-431a-8e04-8ef4226c4d15",
+              "parentUUID": "af0f941a-b87b-4d20-a7e9-c0110f22dd49",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Transfer between accounts",
+              "fullTitle": "BankBug Transfer between accounts",
+              "timedOut": null,
+              "duration": 1775,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const valueToTranfer = 100;\ncy.login(_userDataUtils.web.userRegistered, _userDataUtils.web.password);\ncy.transferToAccount(_userDataUtils.web.userToTransfer, _userDataUtils.web.userRegistered, valueToTranfer);\ncy.validateTransfer();\ncy.validateAmount(_userDataUtils.web.userToTransfer, _userDataUtils.web.userRegistered, valueToTranfer);",
+              "err": {},
+              "uuid": "94766971-7184-4cdd-b5b0-a5abcd4935fa",
+              "parentUUID": "af0f941a-b87b-4d20-a7e9-c0110f22dd49",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "account logout",
+              "fullTitle": "BankBug account logout",
+              "timedOut": null,
+              "duration": 1037,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.login(_userDataUtils.web.userRegistered, _userDataUtils.web.password);\ncy.logout();\ncy.validateLogout();",
+              "err": {},
+              "uuid": "f8a1cb28-22bf-4e74-bc1f-edab44573d0a",
+              "parentUUID": "af0f941a-b87b-4d20-a7e9-c0110f22dd49",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ebb432ee-6a75-431a-8e04-8ef4226c4d15",
+            "94766971-7184-4cdd-b5b0-a5abcd4935fa",
+            "f8a1cb28-22bf-4e74-bc1f-edab44573d0a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5138,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
