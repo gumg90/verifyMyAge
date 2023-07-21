@@ -1,0 +1,8 @@
+{
+    "web":{
+        "baseUrl": "https://bugbank.netlify.app"
+    },
+    "api": {
+        "baseUrl": "https://serverest.dev"
+    }
+}
