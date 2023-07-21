@@ -24,7 +24,7 @@ jobs:
         runs-on: self-hosted
         continue-on-error: true
         container:
-            image: cypress/browsers:node16.16.0-chrome105-ff99-edge
+            image: cypress/base:18.16.0
         env:
             CONTEXT: ${{ github.event.inputs.context }}
 
