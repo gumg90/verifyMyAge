@@ -36,11 +36,11 @@ jobs:
               with:
                   command: npm run cy:run
 
-            - name: Deploy to GitHub Pages
-              uses: JamesIves/github-pages-deploy-action@4.1.2
+            - name: Generate HTML report
+              run: npm run generate:report
+
+            - name: Deploy report page to GitHub Page
+              uses: peaceiris/actions-gh-pages@v3
               with:
-                branch: reports
-                folder: mochawesome-report
-                clean: true
-              env:
-                GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                github_token: ${{ secrets.GITHUB_TOKEN }}
+                publish_dir: ./public
