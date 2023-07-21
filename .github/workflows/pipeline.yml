@@ -1,0 +1,45 @@
+# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+name: Pipe CI
+
+on:
+    push:
+        branches:
+            - master
+    schedule:
+        - cron: "0 12,21 * * 1-5" # 8:30 and 19:30 hrs
+    workflow_dispatch:
+        inputs:
+            context:
+              type: choice
+              description: "context test api or web"
+              options:
+                - web
+                - api
+              required: true
+              default: web
+
+jobs:
+    tests:
+        runs-on: self-hosted
+        continue-on-error: true
+        container:
+            image: cypress/browsers:node16.16.0-chrome105-ff99-edge
+        env:
+            CONTEXT: ${{ github.event.inputs.context }}
+
+        steps:
+            - uses: actions/checkout@v2
+            - name: Cypress run
+              id: tests
+              uses: cypress-io/github-action@v4
+              with:
+                  command: npm run cy:run
+
+            - name: Deploy report page
+              uses: peaceiris/actions-gh-pages@v3
+              with:
+                github_token: ${{ secrets.GITHUB_TOKEN }}
+                publish_dir: ./public
+                user_name: 'github-actions[bot]'
+                user_email: 'github-actions[bot]@users.noreply.github.com'

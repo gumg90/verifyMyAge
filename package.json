@@ -1,0 +1,25 @@
+{
+  "name": "verifymyage",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cy:run": "cypress run",
+    "cy:open": "cypress open"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^18.0.1",
+    "@cypress/browserify-preprocessor": "^3.0.2",
+    "@faker-js/faker": "^8.0.2",
+    "@shelex/cypress-allure-plugin": "^2.40.0",
+    "allure-commandline": "^2.23.0",
+    "cypress": "^12.17.1",
+    "cypress-multi-reporters": "^1.6.3",
+    "dotenv": "^16.3.1",
+    "mocha": "^10.2.0",
+    "mochawesome": "^7.1.3"
+  }
+}
