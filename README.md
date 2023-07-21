@@ -45,7 +45,7 @@ npm run cy:open
 3. Execute in actions CI/CD
  - Access action tab
  - Click in "Pipe CI"
- - Click "workflow-dispatch"
+ - Click "Run workflow"
  - Select of context to need execute
  - End start
 
