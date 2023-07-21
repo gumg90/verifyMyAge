@@ -21,7 +21,7 @@ on:
 
 jobs:
     tests:
-        runs-on: self-hosted
+        runs-on: ubuntu-latest
         continue-on-error: true
         container:
             image: cypress/base:18.16.0
