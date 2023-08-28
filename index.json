@@ -5,9 +5,9 @@
     "passes": 3,
     "pending": 0,
     "failures": 0,
-    "start": "2023-08-25T21:04:58.657Z",
-    "end": "2023-08-25T21:05:05.108Z",
-    "duration": 6451,
+    "start": "2023-08-28T12:13:22.650Z",
+    "end": "2023-08-28T12:13:29.794Z",
+    "duration": 7144,
     "testsRegistered": 3,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "a9b529af-361f-4d8c-905a-04cd6acf28d6",
+      "uuid": "f710e0e5-e45e-46b3-a4a2-efea8472808f",
       "title": "",
       "fullFile": "cypress/e2e/web/web.cy.js",
       "file": "cypress/e2e/web/web.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "b66caae3-4cde-4911-9578-5ad8c2e2f197",
+          "uuid": "cbaa70e9-cfa2-490f-95ed-bc9e8fc524e6",
           "title": "BankBug",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Register accounts with amount",
               "fullTitle": "BankBug Register accounts with amount",
               "timedOut": null,
-              "duration": 2960,
+              "duration": 3506,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "cy.registerAccount(_userDataUtils.web.email1, _userDataUtils.web.name1, _userDataUtils.web.password);\ncy.validateRegister();",
               "err": {},
-              "uuid": "1100fcb1-ee58-40ed-8dd8-2fc8e2fbfb54",
-              "parentUUID": "b66caae3-4cde-4911-9578-5ad8c2e2f197",
+              "uuid": "b96c61e6-02e5-4e15-be5e-8a966ad0fd92",
+              "parentUUID": "cbaa70e9-cfa2-490f-95ed-bc9e8fc524e6",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "Transfer between accounts",
               "fullTitle": "BankBug Transfer between accounts",
               "timedOut": null,
-              "duration": 1955,
+              "duration": 2239,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -65,8 +65,8 @@
               "context": null,
               "code": "const valueToTranfer = 100;\ncy.login(_userDataUtils.web.userRegistered, _userDataUtils.web.password);\ncy.transferToAccount(_userDataUtils.web.userToTransfer, _userDataUtils.web.userRegistered, valueToTranfer);\ncy.validateTransfer();\ncy.validateAmount(_userDataUtils.web.userToTransfer, _userDataUtils.web.userRegistered, valueToTranfer);",
               "err": {},
-              "uuid": "042ff101-d94f-4716-b665-0afa68c6c90d",
-              "parentUUID": "b66caae3-4cde-4911-9578-5ad8c2e2f197",
+              "uuid": "c7acbeb9-2e3a-4bb5-8167-28be16a3f40f",
+              "parentUUID": "cbaa70e9-cfa2-490f-95ed-bc9e8fc524e6",
               "isHook": false,
               "skipped": false
             },
@@ -74,7 +74,7 @@
               "title": "account logout",
               "fullTitle": "BankBug account logout",
               "timedOut": null,
-              "duration": 1481,
+              "duration": 1333,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -83,22 +83,22 @@
               "context": null,
               "code": "cy.login(_userDataUtils.web.userRegistered, _userDataUtils.web.password);\ncy.logout();\ncy.validateLogout();",
               "err": {},
-              "uuid": "6694169f-60c0-42f2-9f4e-d1e638899982",
-              "parentUUID": "b66caae3-4cde-4911-9578-5ad8c2e2f197",
+              "uuid": "686bff44-5332-4c00-9c94-61da94607bda",
+              "parentUUID": "cbaa70e9-cfa2-490f-95ed-bc9e8fc524e6",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "1100fcb1-ee58-40ed-8dd8-2fc8e2fbfb54",
-            "042ff101-d94f-4716-b665-0afa68c6c90d",
-            "6694169f-60c0-42f2-9f4e-d1e638899982"
+            "b96c61e6-02e5-4e15-be5e-8a966ad0fd92",
+            "c7acbeb9-2e3a-4bb5-8167-28be16a3f40f",
+            "686bff44-5332-4c00-9c94-61da94607bda"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 6396,
+          "duration": 7078,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
